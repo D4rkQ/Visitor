@@ -25,4 +25,9 @@ public class Article implements Component {
     public Money evaluate() {
         return money;
     }
+
+    @Override
+    public void accept(ComponentVisitor visitor) {
+        visitor.visitArticle(this);
+    }
 }

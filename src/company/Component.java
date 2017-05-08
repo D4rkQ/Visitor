@@ -6,5 +6,5 @@ package company;
 public interface Component {
 
     Money evaluate();
-
+    void accept(ComponentVisitor visitor);
 }

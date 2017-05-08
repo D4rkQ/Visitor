@@ -60,6 +60,11 @@ public class Invoice extends ContainsComponentList implements Component {
     }
 
     @Override
+    public void accept(ComponentVisitor visitor) {
+        visitor.visitInvoice(this);
+    }
+
+    @Override
     public String toString() {
         return "Invoice{" +
                 "listOfLineItems=" + listOfLineItems +

@@ -44,4 +44,9 @@ public class LineItem implements Component {
     public Money evaluate() {
         return this.sum();
     }
+
+    @Override
+    public void accept(ComponentVisitor visitor) {
+        visitor.visitLineItem(this);
+    }
 }

@@ -29,4 +29,9 @@ public class Journal extends ContainsComponentList implements Component {
                 "listOfInvoices=" + listOfInvoices +
                 '}';
     }
+
+    @Override
+    public void accept(ComponentVisitor visitor) {
+        visitor.visitJournal(this);
+    }
 }
